@@ -1,0 +1,271 @@
+/* Main container styles */
+.ethnic-suits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fffaf5;
+}
+
+.ethnic-suits-header {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Grid layout for suits */
+.ethnic-suits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Suit card styles */
+.ethnic-suit-card {
+  border: 1px solid #f5e6d9;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.ethnic-suit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(211, 84, 0, 0.1);
+}
+
+/* Suit image styles */
+.suit-image-container {
+  position: relative;
+  padding-top: 125%; /* Adjusted for suits aspect ratio */
+  overflow: hidden;
+}
+
+.suit-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.suit-thumbnails {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff5eb;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border: 1px solid #f5e6d9;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #d35400;
+}
+
+/* Suit info styles */
+.suit-info {
+  padding: 20px;
+}
+
+.suit-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+.suit-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+.suit-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-count {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.suit-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Suit details */
+.suit-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #d35400;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Suit options */
+.suit-options {
+  margin-bottom: 20px;
+}
+
+.color-options, .size-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-options span, .size-options span {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+  border-color: #d35400;
+}
+
+.size-option {
+  padding: 3px 8px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.size-option:hover {
+  background-color: #fff5eb;
+  border-color: #d35400;
+  color: #d35400;
+}
+
+/* Suit actions */
+.suit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #d35400;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #b34700;
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #d35400;
+  border: 1px solid #d35400;
+}
+
+.wishlist-btn:hover {
+  background-color: #fff5eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ethnic-suits-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .ethnic-suits-header {
+    font-size: 2rem;
+  }
+  
+  .suit-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ethnic-suits-container {
+    padding: 10px;
+  }
+  
+  .ethnic-suit-card {
+    margin-bottom: 20px;
+  }
+  
+  .suit-image-container {
+    padding-top: 110%;
+  }
+  
+  .suit-details {
+    grid-template-columns: 1fr;
+  }
+}

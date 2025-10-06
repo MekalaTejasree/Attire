@@ -1,0 +1,270 @@
+/* Main container styles */
+.men-jeans-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.men-jeans-header {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Grid layout for jeans */
+.men-jeans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Jeans product card styles */
+.jeans-product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.jeans-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Jeans image styles */
+.jeans-image-container {
+  position: relative;
+  padding-top: 110%; /* Adjusted for jeans aspect ratio */
+  overflow: hidden;
+}
+
+.jeans-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.jeans-thumbnails {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #1a1a1a;
+}
+
+/* Jeans info styles */
+.jeans-info {
+  padding: 20px;
+}
+
+.jeans-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jeans-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.jeans-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-count {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.jeans-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Jeans details */
+.jeans-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+}
+
+/* Jeans options */
+.jeans-options {
+  margin-bottom: 20px;
+}
+
+.color-options, .size-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-options span, .size-options span {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+  border-color: #1a1a1a;
+}
+
+.size-option {
+  padding: 3px 8px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.size-option:hover {
+  background-color: #f0f0f0;
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+/* Jeans actions */
+.jeans-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #000;
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.wishlist-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .men-jeans-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .men-jeans-header {
+    font-size: 2rem;
+  }
+  
+  .jeans-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-jeans-container {
+    padding: 10px;
+  }
+  
+  .jeans-product-card {
+    margin-bottom: 20px;
+  }
+  
+  .jeans-image-container {
+    padding-top: 100%;
+  }
+  
+  .jeans-details {
+    grid-template-columns: 1fr;
+  }
+}

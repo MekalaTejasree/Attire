@@ -1,0 +1,275 @@
+/* Main container styles */
+.rings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa;
+}
+
+.rings-header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Grid layout for rings */
+.rings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Ring card styles */
+.ring-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.ring-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Ring image styles */
+.ring-image-container {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.ring-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.ring-thumbnails {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-color: white;
+  object-fit: contain;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+/* Ring info styles */
+.ring-info {
+  padding: 20px;
+}
+
+.ring-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+.ring-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ring-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-count {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.ring-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Ring details */
+.ring-details {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Ring options */
+.ring-options {
+  margin-bottom: 20px;
+}
+
+.metal-options, .size-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.metal-options span, .size-options span {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.metal-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.metal-option:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+.size-option {
+  padding: 3px 8px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.size-option:hover {
+  background-color: #f5f5f5;
+  border-color: #333;
+  color: #333;
+}
+
+/* Ring actions */
+.ring-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #333;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #555;
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.wishlist-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .rings-header {
+    font-size: 2rem;
+  }
+  
+  .ring-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rings-container {
+    padding: 10px;
+  }
+  
+  .ring-card {
+    margin-bottom: 20px;
+  }
+  
+  .ring-image-container {
+    padding-top: 100%;
+  }
+}

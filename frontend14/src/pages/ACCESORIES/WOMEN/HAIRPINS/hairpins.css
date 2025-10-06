@@ -1,0 +1,272 @@
+/* Base Styles */
+.womens-hairpins-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  background-color: #fff9f9;
+}
+
+.womens-hairpins-header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #5e2c3e;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.womens-hairpins-header::after {
+  
+  position: absolute;
+  bottom: 0;
+  
+  width: 100px;
+  height: 3px;
+  background: #e8b5b5;
+}
+
+/* Grid Layout */
+.womens-hairpins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.womens-hairpin-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0e6e6;
+}
+
+.womens-hairpin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Section */
+.hairpin-image-container {
+  position: relative;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.hairpin-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.hairpin-thumbnails {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.womens-hairpin-card:hover .hairpin-thumbnails {
+  opacity: 1;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid white;
+  cursor: pointer;
+  object-fit: cover;
+  background: white;
+  padding: 3px;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Info Section */
+.hairpin-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hairpin-name {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #5e2c3e;
+  font-family: 'Playfair Display', serif;
+}
+
+.hairpin-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c48f8f;
+  margin: 0 0 0.8rem 0;
+}
+
+.hairpin-rating {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #e0c8c8;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #e8b5b5;
+}
+
+.review-count {
+  font-size: 0.9rem;
+  color: #a78a8a;
+  margin-left: 5px;
+}
+
+.hairpin-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Details Section */
+.hairpin-details {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 0.3rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  margin-right: 5px;
+  color: #5e2c3e;
+}
+
+.detail-value {
+  color: #8a6a6a;
+}
+
+/* Color Options */
+.hairpin-options {
+  margin: 1rem 0;
+}
+
+.color-options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.color-options span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #5e2c3e;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+/* Action Buttons */
+.hairpin-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Raleway', sans-serif;
+}
+
+.add-to-cart-btn {
+  background-color: #5e2c3e;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #7a3a52;
+  transform: translateY(-2px);
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #5e2c3e;
+  border: 1px solid #e8b5b5;
+}
+
+.wishlist-btn:hover {
+  background-color: #fff0f0;
+  color: #c48f8f;
+  border-color: #c48f8f;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .womens-hairpins-header {
+    font-size: 2rem;
+  }
+  
+  .womens-hairpins-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .womens-hairpins-header {
+    font-size: 1.8rem;
+  }
+  
+  .hairpin-actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,225 @@
+/* Main container styles */
+.trousers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.trousers-header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Grid layout for products */
+.trousers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Product card styles */
+.trouser-product-card {
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.trouser-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image styles */
+.product-image-container {
+  position: relative;
+  padding-top: 120%; /* Adjusted for trousers aspect ratio */
+  overflow: hidden;
+}
+
+.product-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-thumbnails {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Product info styles */
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-count {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Product options */
+.product-options {
+  margin-bottom: 20px;
+}
+
+.color-options, .size-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-options span, .size-options span {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.size-option {
+  padding: 3px 8px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.size-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Button styles */
+.add-to-cart-btn, .wishlist-btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #e63946;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #c1121f;
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.wishlist-btn:hover {
+  background-color: #f8f8f8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .trousers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .trousers-header {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trousers-container {
+    padding: 10px;
+  }
+  
+  .trouser-product-card {
+    margin-bottom: 20px;
+  }
+  
+  .product-image-container {
+    padding-top: 100%;
+  }
+}

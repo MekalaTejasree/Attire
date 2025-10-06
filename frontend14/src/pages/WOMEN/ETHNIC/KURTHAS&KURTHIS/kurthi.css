@@ -1,0 +1,257 @@
+/* Main container styles */
+.we-kurthi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fffaf5;
+}
+
+.we-kurthi-header {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Grid layout for kurtis */
+.we-kurthi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Kurthi card styles */
+.we-kurthi-card {
+  border: 1px solid #f5e6d9;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.we-kurthi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(211, 84, 0, 0.1);
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+  padding-top: 125%;
+  overflow: hidden;
+}
+
+.we-kurthi-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d35400;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+/* Quick view button */
+.quick-view-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fffaf5;
+  border: 1px solid #d35400;
+  color: #d35400;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-view-btn:hover {
+  background-color: #d35400;
+  color: white;
+}
+
+/* Kurthi details */
+.we-kurthi-details {
+  padding: 20px;
+}
+
+.we-kurthi-details h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.we-price {
+  font-weight: bold;
+  color: #d35400;
+  font-size: 1.2rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Rating styles */
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star.half-filled {
+  background: linear-gradient(to right, #ffc107 50%, #ccc 50%);
+  
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.we-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Size selector */
+.size-selector {
+  margin-bottom: 10px;
+}
+
+.size-dropdown {
+  margin-left: 10px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+/* Color options */
+.color-options {
+  margin-bottom: 15px;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.2);
+  border-color: #d35400;
+}
+
+/* Action buttons */
+.we-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.we-cart-btn, .we-wishlist-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.we-cart-btn {
+  background-color: #d35400;
+  color: white;
+}
+
+.we-cart-btn:hover {
+  background-color: #b34700;
+}
+
+.we-wishlist-btn {
+  background-color: white;
+  color: #d35400;
+  border: 1px solid #d35400;
+}
+
+.we-wishlist-btn:hover {
+  background-color: #fff5eb;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .we-kurthi-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .we-kurthi-header {
+    font-size: 2rem;
+  }
+
+  .we-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .we-kurthi-container {
+    padding: 10px;
+  }
+
+  .we-kurthi-card {
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    padding-top: 110%;
+  }
+}

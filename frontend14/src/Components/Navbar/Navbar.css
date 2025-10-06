@@ -1,0 +1,199 @@
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  height: 55px;
+}
+
+/* Logo Styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo img {
+  height: 32px;
+}
+
+.nav-logo p {
+  color: rgb(0, 7, 1);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-menu li {
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.nav-menu li a:hover {
+  color: #4a6bff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 0 0 6px 6px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  min-width: 500px;
+  z-index: 1001;
+}
+
+.dropdown-column {
+  min-width: 120px;
+}
+
+.dropdown-column h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-column li {
+  margin-bottom: 6px;
+}
+
+.dropdown-column li a {
+  color: #666;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.dropdown-column li a:hover {
+  color: #4a6bff;
+  padding-left: 4px;
+}
+
+/* Right Navigation Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* User Section Styles */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.username {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: 6px 16px;
+  background-color: #ff4757;
+  border: none;
+  border-radius: 56px;
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ff3742;
+  transform: translateY(-1px);
+}
+
+/* SKY BLUE LOGIN BUTTON */
+.login-btn {
+  padding: 6px 16px;
+  
+  background-color: #4a6bff;
+  border-radius: 56px;
+  font-size: 13px;
+  color: #87CEEB; /* Sky blue text */
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #87CEEB; /* Sky blue background */
+  color: white; /* White text on hover */
+}
+
+/* Cart Styles */
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.cart-link:hover .cart-icon {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #cb2a0a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  font-weight: bold;
+}

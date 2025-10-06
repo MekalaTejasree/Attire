@@ -1,0 +1,274 @@
+/* Main Container */
+.men-sneakers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles */
+.men-sneakers-header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.men-sneakers-subheader {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* Grid Layout */
+.men-sneakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Product Card */
+.men-sneakers-product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.men-sneakers-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Container */
+.product-image-container {
+  position: relative;
+}
+
+.product-main-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-thumbnails {
+  display: flex;
+  padding: 10px;
+  gap: 8px;
+  background: #f8f9fa;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.thumbnail:hover {
+  border: 1px solid #3498db;
+  transform: scale(1.05);
+}
+
+/* Product Info */
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.product-rating {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #f1c40f;
+  font-size: 1.1rem;
+  margin-right: 2px;
+}
+
+.review-count {
+  margin-left: 8px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.product-description {
+  color: #34495e;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.product-features {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.product-features h4 {
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.product-features ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.product-features li {
+  margin-bottom: 5px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Product Options */
+.product-options {
+  margin-bottom: 20px;
+}
+
+.color-options, .size-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.color-options span, .size-options span {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: 10px;
+  font-size: 0.95rem;
+}
+
+.color-option {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.size-selector {
+  padding: 8px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.size-selector:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Product Actions */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+}
+
+.add-to-cart-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2980b9;
+}
+
+.wishlist-btn {
+  background-color: white;
+  border: 1px solid #bdc3c7;
+  color: #7f8c8d;
+}
+
+.wishlist-btn:hover {
+  background-color: #f8f9fa;
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .men-sneakers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-main-image {
+    height: 300px;
+  }
+  
+  .men-sneakers-header {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .color-options, .size-options {
+    margin-bottom: 10px;
+  }
+}

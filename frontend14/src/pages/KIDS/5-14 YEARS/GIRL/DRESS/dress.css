@@ -1,0 +1,243 @@
+/* Main page styles */
+.kids-dresses-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fdf2f5;
+}
+
+.page-title {
+  text-align: center;
+  color: #e84393;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Products grid styles */
+.dress-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* Product card styles */
+.dress-product-card {
+  border: 1px solid #f8c1d5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.dress-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(232, 67, 147, 0.1);
+}
+
+/* Product image styles */
+.product-image-container {
+  position: relative;
+  padding-top: 120%; /* Slightly taller for dresses */
+  overflow: hidden;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product info styles */
+.product-info {
+  padding: 18px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #e84393;
+  font-weight: 500;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.product-type {
+  font-size: 0.85rem;
+  color: #e84393;
+  font-weight: 500;
+}
+
+.product-occasion {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e84393;
+  margin-bottom: 12px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #f1c40f;
+}
+
+.review-count {
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.product-details {
+  margin-bottom: 12px;
+}
+
+.product-sizes, .product-colors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.size-tag {
+  background-color: #f8c1d5;
+  color: #e84393;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.color-tag {
+  background-color: #fce4ec;
+  color: #e84393;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #f8c1d5;
+}
+
+.product-description {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Product actions styles */
+.product-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.add-to-cart-btn {
+  background-color: #e84393;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #d6337d;
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #e84393;
+  border: 1px solid #e84393;
+}
+
+.wishlist-btn:hover {
+  background-color: #fce4ec;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .dress-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dress-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .dress-products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kids-dresses-page {
+    padding: 15px;
+  }
+  
+  .dress-products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .add-to-cart-btn, .wishlist-btn {
+    width: 100%;
+  }
+}

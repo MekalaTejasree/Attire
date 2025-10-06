@@ -1,0 +1,270 @@
+/* Main container styles */
+.men-trousers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.men-trousers-header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Grid layout for trousers */
+.men-trousers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Trouser product card styles */
+.trouser-product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.trouser-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Trouser image styles */
+.trouser-image-container {
+  position: relative;
+  padding-top: 130%; /* Adjusted for trousers aspect ratio */
+  overflow: hidden;
+}
+
+.trouser-main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.trouser-thumbnails {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+/* Trouser info styles */
+.trouser-info {
+  padding: 20px;
+}
+
+.trouser-name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.trouser-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.trouser-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-right: 3px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-count {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.trouser-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Trouser details */
+.trouser-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Trouser options */
+.trouser-options {
+  margin-bottom: 20px;
+}
+
+.color-options, .size-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-options span, .size-options span {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+  border-color: #333;
+}
+
+.size-option {
+  padding: 3px 8px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.size-option:hover {
+  background-color: #f0f0f0;
+  border-color: #333;
+  color: #333;
+}
+
+/* Trouser actions */
+.trouser-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-cart-btn, .wishlist-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #333;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #111;
+}
+
+.wishlist-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.wishlist-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .men-trousers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .men-trousers-header {
+    font-size: 2rem;
+  }
+  
+  .trouser-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-trousers-container {
+    padding: 10px;
+  }
+  
+  .trouser-product-card {
+    margin-bottom: 20px;
+  }
+  
+  .trouser-image-container {
+    padding-top: 120%;
+  }
+  
+  .trouser-details {
+    grid-template-columns: 1fr;
+  }
+}
